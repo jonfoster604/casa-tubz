@@ -1,33 +1,30 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
-import '../Main/Main.scss';
-const options = {
-  method: 'GET',
-  url: 'https://free-to-play-games-database.p.rapidapi.com/api/games',
-  params: { platform: 'browser', 'sort-by': 'release-date' },
-  headers: {
-    'x-rapidapi-key': '34bbff0987msha318d9d42be41b9p1efdabjsn84d303ad83b6',
-    'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com',
-  },
-};
+import './GameDeets.scss';
 export class GameDeets extends Component {
   state = {
     activeGame: [],
-    games: [],
   };
+
   componentDidMount() {
-    this.getGames();
+    this.getGame();
   }
 
-  getGames = () => {
+  getGame = () => {
     axios
-      .request(options)
+      .request({
+        method: 'GET',
+        url: 'https://free-to-play-games-database.p.rapidapi.com/api/game',
+        params: { id: this.props.match.params.gameID },
+        headers: {
+          'x-rapidapi-key':
+            '34bbff0987msha318d9d42be41b9p1efdabjsn84d303ad83b6',
+          'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com',
+        },
+      })
       .then((res) => {
-        // console.log(res.data);
-        // console.log(this.state)
-        this.setState({ games: res.data });
-        // console.log(this.state);
+        this.setState({ activeGame: res.data });
+        console.log(this.state.activeGame);
       })
       .catch(function (error) {
         console.error(error);
@@ -36,39 +33,35 @@ export class GameDeets extends Component {
   render() {
     return (
       <main id="main-container">
-        <div className="content">
-          <div className="content--card" id="topCard"></div>
-          {this.state.games.length === 0 ? (
-            <div>Loading....</div>
-          ) : (
-            this.state.games.map((el, id) => {
-              return (
-                  <div key={id} className="content--card">
-                 <Link to="/games/{id}">
-                      <img
-                    className="content--card-image"
-                    src={el.thumbnail}
-                    alt={el.title}
-                  />
-                     </Link>
-                  <div className="content--card-title">
-                    <Link to={{
-                        pathname:'/games/'+el.id
+          {this.state.activeGame.length === 0 ? (
+              <div>Loading</div>
+              ) : (<>
+                      <div className="content--card" id="topCard">
 
-                    }
-                    }>
-
-                    <h3>{el.title}</h3>
-                    </Link>
-                  </div>
-                  <div className="content-card-description">
-                    <p>{el.short_description}</p>
-                  </div>
+              <img
+                src={this.state.activeGame.thumbnail}
+                alt={this.state.activeGame.title}
+                />
                 </div>
-              );
-            })
+                  <div className="content">
+                  <div className="content--card" id="activeGame">
+              <div className="content--card-title"><h3>{this.state.activeGame.title}</h3></div>
+              <div className="content--card-info">
+                  <ul>
+                      <li>Developer: {this.state.activeGame.developer}</li>
+                      <li>Publisher: {this.state.activeGame.publisher}</li>
+                      <li>Release: {this.state.activeGame.release_date}</li>
+                      <li>Genre: {this.state.activeGame.genre}</li>
+                      <li>Platform: {this.state.activeGame.platform}</li>
+                      <li><a href={this.state.activeGame.game_url} target="_blank" rel="noreferrer"><button>Play Now!</button></a></li>
+                  </ul>
+              </div>
+              <div className="content-card-description">
+                  <p>{this.state.activeGame.description}</p>
+              </div>
+            </div>
+        </div></>
           )}
-        </div>
       </main>
     );
   }

@@ -42,9 +42,10 @@ export class Main extends Component {
             <div>Loading....</div>
           ) : (
             this.state.games.map((el, id) => {
+                const path=`/games/${el.id}`;
               return (
                   <div key={id} className="content--card">
-                 <Link to="/games/{id}">
+                 <Link to={path}>
                       <img
                     className="content--card-image"
                     src={el.thumbnail}

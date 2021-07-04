@@ -10,7 +10,7 @@ function App() {
     <BrowserRouter>
             <Switch>
                 <Route path="/" exact component={Main} />
-                <Route path="/games/:gameID" render={(routerProps) => <GameDeets {...routerProps} />} />
+                <Route path="/games/:gameID" component={GameDeets} />
             </Switch>
 
         </BrowserRouter>
