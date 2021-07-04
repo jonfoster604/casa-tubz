@@ -1,6 +1,6 @@
+@use './Partials/variables' as *;
+@import  './Partials/typography';
 @import './Partials/reset';
-@import './Partials/variables';
-@import './Partials/typography';
 
 html{
     box-sizing: border-box;
@@ -51,7 +51,7 @@ body{
             width:41%;
         }
         @media (min-width:$scr-desk){
-            width:20%;
+            width:28%;
         }
     }
 }

@@ -28,7 +28,7 @@ h2 {
 }
 
 h3 {
-    font-size: $font-size-h2;
+    font-size: 2.2rem;
     line-height: 1.25;
     margin: $baseline 0 $baseline 0;
 }
@@ -42,44 +42,14 @@ h4 {
 p {
     margin: 0 0 $baseline;
     max-width: 30em;
-    word-wrap: break-word; //legacy
-
-    /* Non standard for webkit */
-    word-break: break-word;
-    overflow-wrap: break-word;
-    -ms-hyphenate-limit-lines: 1;
-    -webkit-hyphenate-limit-lines: 1;
-    -ms-hyphenate-limit-chars: 6 3 2;
-    hyphens: auto;
+    font-size: 1.6rem;
 }
 
-a {
+a,a:visited {
+    color:inherit;
     text-decoration: none;
 }
-
-//medium style links
-p a {
-    background-image: linear-gradient(to bottom, transparent 50%, currentcolor 50%);
-    background-repeat: repeat-x;
-    background-size: 1px 1px;
-    background-position: 0 0.95em;
-}
-
-aside,
-figcaption,
-footer {
-    font-size: $font-size-sm;
-}
-
-figcaption p{
-    max-width: 30em;
-}
-
-h1,
-h2 {
-    max-width: 9em;
-}
-
-.u-emphasis {
+a:hover{
     font-weight: bold;
 }
+

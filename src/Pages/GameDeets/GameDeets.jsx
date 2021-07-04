@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import './Main.scss';
+import '../Main/Main.scss';
 const options = {
   method: 'GET',
   url: 'https://free-to-play-games-database.p.rapidapi.com/api/games',
@@ -11,7 +11,7 @@ const options = {
     'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com',
   },
 };
-export class Main extends Component {
+export class GameDeets extends Component {
   state = {
     activeGame: [],
     games: [],
@@ -74,4 +74,4 @@ export class Main extends Component {
   }
 }
 
-export default Main;
+export default GameDeets;

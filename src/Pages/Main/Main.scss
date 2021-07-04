@@ -1,0 +1,35 @@
+@use '../../Styles/Partials/variables' as *;
+.content{
+    &--card{
+        display:flex;
+        flex-flow:column;
+        justify-content: flex-start;
+        padding:0;
+        background-color: black;
+    
+        &-title{
+            background-color: $accent-color-alt;
+            width:100%;
+            text-align: center;
+            height:75px;
+            font-weight: 700;
+        }
+        & p {
+            width:80%;
+            font-size: 1.6rem;
+            color:white;
+            margin:auto auto;
+            padding:16px;
+            line-height: 2.0;
+        }
+    }
+}
+img.content--card-image {
+    width:100%;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+
+
+
+
