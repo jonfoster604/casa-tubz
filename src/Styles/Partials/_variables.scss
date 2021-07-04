@@ -1,0 +1,43 @@
+$abs-min-size:300px;
+$abs-max-size:1020px;
+$scr-min:320px;
+$scr-tablet:600px;
+$scr-desk:1020px;
+$scr-max:1200px;
+
+$font-size-base: 62.5%;
+$font-size-sm: .875rem;
+
+$font-size-h1: 3.6rem;
+$font-size-h2: 3.2rem;
+$font-size-h3: 1.6rem;
+$font-size-ingress: 2.4rem;
+
+$line-height-base: 2.4;
+$baseline: $line-height-base * .625rem;
+
+// ###### Color scheme ######
+$dark-color:#32323232;
+$main-highlight:#afafaf;
+$accent-color:#e1e1e1;
+$accent-color-alt:#fafafa;
+$main-scheme-color:#004892;
+$main-scheme-color-accent:#ffe600;
+
+// ######  NAV and MENU colors ######
+$nav-bg-color:$main-scheme-color-accent;
+$nav-bg-color-alt:$nav-bg-color;
+$nav-bg-text:$dark-color;
+$nav-bg-text-alt:$main-scheme-color-accent;
+
+$foot-bg-color:$nav-bg-color;
+
+
+$background-color-nav:$main-scheme-color-accent;
+
+$body-bg-color:$main-scheme-color;
+$container-bg-color:$accent-color-alt;
+$main1:orange;
+$main2:blue;
+
+
