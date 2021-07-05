@@ -2,6 +2,12 @@
 header {
     padding:8px 0 0 24px;
     background-color:rgba(0,0,0,.75);
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    overflow: hidden;
+    z-index: 10;
 }
 
 #navWrapper{
@@ -12,6 +18,7 @@ header {
     display:flex;
     // z-index: 75;
 }
+
 .navBar{
     &:first-child{
         width:50px;
@@ -82,7 +89,7 @@ header {
     height: 100vh;
     background-color: $background-color-nav;
     position: fixed;
-    top: 71px;
+    top: 80px;
     left: 0;
     padding-right: 24px;
     transition: transform 0.75s cubic-bezier(0, 0.52, 0, 1);
@@ -119,6 +126,18 @@ header {
 
 #flyoutMenu h2 a:hover {
     text-decoration: underline;
+}
+
+#logo{
+    height:100%;
+    width:14.5rem;
+    position: fixed;
+    top:12px;
+    left:50%;
+    margin-left:-7.25rem;
+    &--h2{
+        font-size: 2.8rem;
+    }
 }
 
 @keyframes flydown{

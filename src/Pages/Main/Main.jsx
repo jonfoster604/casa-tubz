@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './Main.scss';
+// import Hero from '../../Assets/Images/hero1.jpg';
 
 const options = {
   method: 'GET',
@@ -36,7 +37,7 @@ export class Main extends Component {
     return (
       <main id="main-container">
         <div className="content">
-          <div className="content--card" id="topCard"></div>
+          <div className="content--card" id="topCard"><div id="overlay"></div></div>
           {this.state.games.length === 0 ? (
             <div id="loadingCard"><h2>Loading....</h2></div>
           ) : (

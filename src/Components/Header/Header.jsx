@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { IconContext } from 'react-icons';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { VscChromeClose } from 'react-icons/vsc';
+import Logo from '../Logo/Logo';
 import './Header.scss';
 
 function Header() {
@@ -32,7 +33,9 @@ function Header() {
       <div className="navBar-block" id="block1">
         <Hamburger />
       </div>
-      <div className="navBar-block block2"></div>
+      <div className="navBar-block block2">
+        <Logo/>
+      </div>
       <div className="navBar-block block3"></div>
       <nav
         id="flyoutMenu"

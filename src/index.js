@@ -9,7 +9,7 @@ import Logo from './Components/Logo/Logo';
 ReactDOM.render(
   <React.StrictMode>
     <Header/>
-    <Logo/>
+    {/* <Logo/> */}
     <App />
     <Footer />
   </React.StrictMode>,

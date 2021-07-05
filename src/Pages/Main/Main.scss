@@ -11,34 +11,6 @@ div.content--card {
         color:white;
         text-align: center;
         font-weight: 700;
+        z-index: -1;
     }
 }
-
-// .content{
-    // background-color: transparent;
-    // width:90vw;
-    // display:flex;
-    
-    // gap:16px;
-    // &--card{
-        // box-shadow:0 0 5px 0 white;
-        // display:flex;
-        // flex-flow:column;
-        // justify-content: flex-start;
-        // padding:0;
-    
-    //     & p {
-    //         width:80%;
-    //         font-size: 1.6rem;
-    //         color:white;
-    //         margin:auto auto;
-    //         padding:16px;
-    //         line-height: 2.0;
-    //     }
-    // }
-// }
-
-
-
-
-
