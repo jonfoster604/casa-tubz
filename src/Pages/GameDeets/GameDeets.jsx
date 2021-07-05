@@ -33,35 +33,45 @@ export class GameDeets extends Component {
   render() {
     return (
       <main id="main-container">
-          {this.state.activeGame.length === 0 ? (
-              <div>Loading</div>
-              ) : (<>
-                      <div className="content--card" id="topCard">
-
+        {this.state.activeGame.length === 0 ? (
+          <div>Loading</div>
+        ) : (
+          <>
+            <div className="content--card" id="topCard">
               <img
                 src={this.state.activeGame.thumbnail}
                 alt={this.state.activeGame.title}
-                />
+              />
+            </div>
+            <div className="content">
+              <div className="content--card" id="activeGame">
+                <div className="content--card-title">
+                  <h2 className="content--card-heading">{this.state.activeGame.title}</h2>
                 </div>
-                  <div className="content">
-                  <div className="content--card" id="activeGame">
-              <div className="content--card-title"><h3>{this.state.activeGame.title}</h3></div>
-              <div className="content--card-info">
+                <div className="content--card-info">
                   <ul>
-                      <li>Developer: {this.state.activeGame.developer}</li>
-                      <li>Publisher: {this.state.activeGame.publisher}</li>
-                      <li>Release: {this.state.activeGame.release_date}</li>
-                      <li>Genre: {this.state.activeGame.genre}</li>
-                      <li>Platform: {this.state.activeGame.platform}</li>
-                      <li><a href={this.state.activeGame.game_url} target="_blank" rel="noreferrer"><button>Play Now!</button></a></li>
+                    <li>Developer: {this.state.activeGame.developer}</li>
+                    <li>Publisher: {this.state.activeGame.publisher}</li>
+                    <li>Release: {this.state.activeGame.release_date}</li>
+                    <li>Genre: {this.state.activeGame.genre}</li>
+                    <li>Platform: {this.state.activeGame.platform}</li>
+                    <li>
+                      <a
+                        href={this.state.activeGame.game_url}
+                        target="_blank"
+                        rel="noreferrer">
+                        <button>Play Now!</button>
+                      </a>
+                    </li>
                   </ul>
-              </div>
-              <div className="content-card-description">
+                </div>
+                <div className="content--card-description">
                   <p>{this.state.activeGame.description}</p>
+                </div>
               </div>
             </div>
-        </div></>
-          )}
+          </>
+        )}
       </main>
     );
   }

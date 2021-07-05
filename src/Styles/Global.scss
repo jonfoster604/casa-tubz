@@ -1,59 +1,69 @@
 @use './Partials/variables' as *;
-@import  './Partials/typography';
 @import './Partials/reset';
+@import './Partials/typography';
 
-html{
-    box-sizing: border-box;
+html {
+  box-sizing: border-box;
 }
-body{
-    background-color: $body-bg-color;
+body {
+  background-color: $body-bg-color;
+  background-image: url(../Assets/body-bg.jpg);
+  background-size: 100%;
 }
 
-#main-container{
-    min-width: $abs-min-size;
-    max-width: $abs-max-size;
-    width:90vw;
-    margin:24px auto;
-    padding:8px 8px 24px 8px;
-    height:100%;
-    border:none;
-    background-color:$container-bg-color;
-    border-radius:24px;
-    box-shadow:0 0 5px 0 $dark-color;
+#main-container {
+  min-width: $abs-min-size;
+  max-width: $abs-max-size;
+  width: 90vw;
+  margin: 24px auto;
+  padding: 8px 8px 24px 8px;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  border-radius: 24px;
+  box-shadow: 0 0 5px 0 $dark-color;
 }
-#topCard{
-    @media (min-width:$scr-tablet){
-        width:90%;
-    }
-    @media (min-width:$scr-desk){
-        width:100%;
-    }
+#topCard {
+  @media (min-width: $scr-tablet) {
+    width: 90%;
+  }
+  @media (min-width: $scr-desk) {
+    width: 100%;
+  }
 }
-.content{
-    width:100%;
-    margin:24px auto;
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    gap:24px;
-    &--card{
-        // border:1px solid orange;
-        width:100%;
-        min-height:200px;
-        padding:16px;
+.content {
+    &-link{
         border-radius:24px;
-        box-shadow:0 0 5px 0 $dark-color;
-        &:hover{
-            box-shadow: 0 0 5px $main-scheme-color-accent;
-        }
-        @media (min-width:$scr-tablet){
-            width:41%;
-        }
-        @media (min-width:$scr-desk){
-            width:28%;
-        }
     }
+  width: 100%;
+  margin: 24px auto;
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  align-content: center;
+  &--card {
+    width: 100%;
+    min-height: 200px;
+    padding: 16px;
+    border-radius: 24px;
+    box-shadow: 0 0 5px 0 white;
+    &-description{
+        background-color: rgba(255, 255, 255,.75);
+        color:#ffff;
+        padding: 8px;
+    }
+    &-image {
+      width: 100%;
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit;
+    }
+    @media (min-width: $scr-tablet) {
+      width: 41%;
+    }
+    @media (min-width: $scr-desk) {
+      width: 28%;
+    }
+  }
 }
-
-

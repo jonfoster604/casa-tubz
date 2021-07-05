@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './Main.scss';
+
 const options = {
   method: 'GET',
   url: 'https://free-to-play-games-database.p.rapidapi.com/api/games',
@@ -24,10 +25,8 @@ export class Main extends Component {
     axios
       .request(options)
       .then((res) => {
-        // console.log(res.data);
-        // console.log(this.state)
         this.setState({ games: res.data });
-        // console.log(this.state);
+
       })
       .catch(function (error) {
         console.error(error);
@@ -39,13 +38,13 @@ export class Main extends Component {
         <div className="content">
           <div className="content--card" id="topCard"></div>
           {this.state.games.length === 0 ? (
-            <div>Loading....</div>
+            <div id="loadingCard"><h2>Loading....</h2></div>
           ) : (
             this.state.games.map((el, id) => {
                 const path=`/games/${el.id}`;
               return (
                   <div key={id} className="content--card">
-                 <Link to={path}>
+                 <Link className="content-link" to={path}>
                       <img
                     className="content--card-image"
                     src={el.thumbnail}
@@ -62,7 +61,7 @@ export class Main extends Component {
                     <h3>{el.title}</h3>
                     </Link>
                   </div>
-                  <div className="content-card-description">
+                  <div className="content--card-description">
                     <p>{el.short_description}</p>
                   </div>
                 </div>

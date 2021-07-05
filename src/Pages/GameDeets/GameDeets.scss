@@ -1,66 +1,102 @@
-#activeGame{
-    width:100%;
-    max-width: 675px;
-    height:auto;
-    display:flex;
-    align-content: center;
-    justify-content:center;
-    &:hover{
-        box-shadow: none;
-    }
+@use '../../Styles/Partials/variables' as *;
+#activeGame {
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  &:hover {
+    box-shadow: none;
+  }
 }
-.content--card-info{
-    background-color:white;
-    margin:auto auto;
-    width:100%;
+#topCard {
+  width: 100%;
+  min-width: $abs-min-size;
+  height: auto;
+  @media (min-width: $scr-tablet) {
+    width: 100%;
+  }
+}
+div.content--card {
+    // &-heading{
+    //     width:100%;
+    //     border:1px solid
+    // }
+    // &-title{
+    //     transform:translateY(-60px);
+    //     height:auto;
+    //     background-color:rgba(0,0,0,.75);
+    //     color:white;
+    // }
+  &-info {
+    background-color: white;
+    margin: auto auto;
+    width: 100%;
+    height:auto;
+  }
+  &-description{
+      background-color:black;
+      font-weight: normal;
+    //   :hover{
+    //   }
+  }
 }
 ul {
-    display:flex;
-    flex-flow: column nowrap;
-    width:100%;
-    height:100px;
-    align-items: center;
-    justify-content: center;
-    margin:auto auto;
-    margin-bottom:48px;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  height: fit-content;
+//   align-items: center;
+//   justify-content: center;
+//   margin: auto auto;
+//   margin-bottom: 48px;
 }
 li {
-    width:100%;
-    height:50%;
-    min-width: fit-content;
-    padding:8px;
-    // border-left:1px dotted blue;
-    display:flex;
-    text-align: left;;
-    align-content: flex-start;
-    &:hover{
-        background-color: yellow;
-        font-weight: bold;
-    }
-    &:last-child:hover{
-        background-color:inherit;
-    }
+  width: 95%;
+  height: 50%;
+  min-width: fit-content;
+  padding: 8px;
+  // border-left:1px dotted blue;
+  display: flex;
+  text-align: left;
+  align-content: flex-start;
+  &:hover {
+    background-color: yellow;
+    font-weight: bold;
+  }
+  &:last-child:hover {
+    background-color: inherit;
+  }
 }
 
-button{
-    width:125px;
-    text-align: left;
-    height:90%;
-    border-radius: 24px;
-    border:none;
-    background-color: inherit;
-    &:hover,:active{
-        background-color: yellow;
-        text-align: center;
-        font-weight: bold;
-        text-decoration: underline;
-    }
+button {
+  width: 125px;
+  text-align: left;
+  height: 90%;
+  border-radius: 24px;
+  border: none;
+  background-color: inherit;
+  &:hover,
+  :active {
+    background-color: yellow;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+  }
 }
-img{
-    width:100%;
-    height:auto;
+img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  // margin:auto auto;
+  @media (min-width: $scr-tablet) {
+    width: 100%;
+  }
 }
-#main-container{
-    // margin:0;
-    padding:0;
+#main-container {
+  // margin:0;
+  // width:100%;
+  padding: 0;
 }

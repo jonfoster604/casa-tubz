@@ -32,22 +32,27 @@ function Header() {
       </div>
       <div className="navBar-block block2"></div>
       <div className="navBar-block block3"></div>
-      <nav id="flyoutMenu" className={showMenu ? 'show' : 'hide'} onClick={toggle} >
+      <nav
+        id="flyoutMenu"
+        className={showMenu ? 'show' : 'hide'}
+        onClick={toggle}>
         <ul>
           <li id="home" className="menuLink">
             Home
           </li>
-          <li id="option1" className="menuLink">
-            Option 1
+          <li id="browser" className="menuLink">
+            Browser Games
           </li>
-          <li id="option2" className="menuLink">
-            Option 2
+          <li id="pc" className="menuLink">
+          PC Games
           </li>
-          <li id="option3" className="menuLink">
-            Option 3
+          <li id="all" className="menuLink">
+          Lookup Game
+          </li>
+          <li id="trending" className="menuLink">
+            Trending News
           </li>
         </ul>
-       
       </nav>
     </header>
   );

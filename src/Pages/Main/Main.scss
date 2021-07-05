@@ -1,34 +1,43 @@
 @use '../../Styles/Partials/variables' as *;
-.content{
-    &--card{
-        display:flex;
-        flex-flow:column;
-        justify-content: flex-start;
-        padding:0;
-        background-color: black;
-    
-        &-title{
-            background-color: $accent-color-alt;
-            width:100%;
-            text-align: center;
-            height:75px;
-            font-weight: 700;
-        }
-        & p {
-            width:80%;
-            font-size: 1.6rem;
-            color:white;
-            margin:auto auto;
-            padding:16px;
-            line-height: 2.0;
-        }
+div.content--card {
+    &-heading{
+        width:100%;
+        border:1px solid
+    }
+    &-title{
+        transform:translateY(-5rem);
+        height:auto;
+        background-color:rgba(0,0,0,.75);
+        color:white;
+        text-align: center;
+        font-weight: 700;
     }
 }
-img.content--card-image {
-    width:100%;
-    border-top-left-radius: inherit;
-    border-top-right-radius: inherit;
-}
+
+// .content{
+    // background-color: transparent;
+    // width:90vw;
+    // display:flex;
+    
+    // gap:16px;
+    // &--card{
+        // box-shadow:0 0 5px 0 white;
+        // display:flex;
+        // flex-flow:column;
+        // justify-content: flex-start;
+        // padding:0;
+    
+    //     & p {
+    //         width:80%;
+    //         font-size: 1.6rem;
+    //         color:white;
+    //         margin:auto auto;
+    //         padding:16px;
+    //         line-height: 2.0;
+    //     }
+    // }
+// }
+
 
 
 
