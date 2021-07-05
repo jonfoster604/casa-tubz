@@ -14,56 +14,47 @@
     box-shadow: none;
   }
 }
-#topCard {
+#topCard.content--card.content--card-deets {
   width: 100%;
   min-width: $abs-min-size;
   height: auto;
-  &.content--card.content--card-deets{
-    background-image: none;
-    border-radius: 24px;
-  }
-  @media (min-width: $scr-tablet) {
-    width: 100%;
-  }
+  background-image: none;
+  border-radius: 24px;
 }
-#activeGame{
+#activeGame {
   max-width: $abs-max-size;
   width: 95%;
 }
 div.content--card {
-   
   &-info {
-    background-color:rgba(255,255,255,.9);
+    background-color: rgba(255, 255, 255, 0.9);
     margin: auto auto;
-    padding-left:16px;
+    padding-left: 16px;
     width: 100%;
-    height:auto;
+    height: auto;
     font-size: 2rem;
-    & ul{
-
+    & ul {
       @media (min-width: 650px) {
-        width:80%;
-        margin:auto auto;
-        display:grid;
-        grid-template-columns:1fr 1fr ;
+        width: 80%;
+        margin: auto auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: 30px 30px 30px;
       }
     }
-      
   }
-  &-description{
-      background-color:black;
-      font-weight: normal;
-      & p{
-        line-height: 2.82rem;
-
-      }
+  &-description {
+    background-color: black;
+    font-weight: normal;
+    & p {
+      line-height: 2.82rem;
+    }
   }
-  &-title{
-    margin:8px;
+  &-title {
+    margin: 8px;
     box-shadow: 0 0 5px 0 white;
     border-radius: 24px;
-    padding:8px;
+    padding: 8px;
   }
 }
 ul {

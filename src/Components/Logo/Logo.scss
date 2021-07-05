@@ -8,50 +8,63 @@
   font-display: swap;
 }
 #logo {
-    width:100vw;
+  width: 100vw;
+  height:auto;
   &--h2 {
-      z-index: 9999;
+    z-index: 9999;
     font-family: 'Neoneon';
-    margin:auto auto;
+    margin: auto auto;
     background-color: rgba(0, 0, 0, 0.55);
     color: hotpink;
-    width:fit-content;
+    width: fit-content;
     animation: neonEffect 3s infinite;
     // font-weight: bold;
     text-align: center;
     font-size: 4.6rem;
-    border-radius:24px;
-    padding:8px;
-    border:1px solid hotpink;
-    
-    @media (min-width: $scr-tablet){
-        font-size: 6.8rem;
+    border-radius: 24px;
+    padding: 8px;
+    border: 1px solid hotpink;
+
+    @media (min-width: $scr-tablet) {
+      font-size: 6.8rem;
     }
   }
 }
 
 @keyframes neonEffect {
-    10%,
-    20%{box-shadow: 0 0 0.1vw #dcd5da, 0.5vw 0.5vw 0.5vw rgba(224, 1, 141, 0.2),
-            -0.5vw -0.5vw 0.5vw rgba(224, 1, 141, 0.2), 0.5vw -0.5vw 0.5vw rgba(224, 1, 141, 0.2),
-            -0.5vw 0.5vw 0.5vw rgba(224, 1, 141, 0.2), 0 -0.5vw 0.5vw rgba(224, 1, 141, 0.2),
-            0 0.5vw 0.5vw rgba(224, 1, 141, 0.2), 0.5vw 0 0.5vw rgba(224, 1, 141, 0.2), 0 0 #fff;}
-    60%,
-    80% {
-        text-shadow: 0 0 0.1vw #dcd5da, 0.5vw 0.5vw 0.5vw rgba(224, 1, 141, 0.2),
-            -0.5vw -0.5vw 0.5vw rgba(224, 1, 141, 0.2), 0.5vw -0.5vw 0.5vw rgba(224, 1, 141, 0.2),
-            -0.5vw 0.5vw 0.5vw rgba(224, 1, 141, 0.2), 0 -0.5vw 0.5vw rgba(224, 1, 141, 0.2),
-            0 0.5vw 0.5vw rgba(224, 1, 141, 0.2), 0.5vw 0 0.5vw rgba(224, 1, 141, 0.2), 0 0 #fff;
-    }
-    70%,
-    100% {
-        text-shadow: 0 0 0.1vw #ffeffa, 0.8vw 0.8vw 0.8vw rgba(224, 1, 141, 0.4),
-            -0.8vw -0.8vw 0.8vw rgba(224, 1, 141, 0.4), 0.8vw -0.8vw 0.8vw rgba(224, 1, 141, 0.4),
-            -0.8vw 0.8vw 0.5vw rgba(224, 1, 141, 0.4), 0 -0.8vw 0.5vw rgba(224, 1, 141, 0.4),
-            0 0.8vw 0.8vw rgba(224, 1, 141, 0.4); 
-             box-shadow: 0 0 0.1vw #ffeffa, 0.8vw 0.8vw 0.8vw rgba(224, 1, 141, 0.4),
-            -0.8vw -0.8vw 0.8vw rgba(224, 1, 141, 0.4), 0.8vw -0.8vw 0.8vw rgba(224, 1, 141, 0.4),
-            -0.8vw 0.8vw 0.5vw rgba(224, 1, 141, 0.4), 0 -0.8vw 0.5vw rgba(224, 1, 141, 0.4),
-            0 0.8vw 0.8vw rgba(224, 1, 141, 0.4);
-    }
+  10%,
+  20% {
+    box-shadow: 0 0 0.1vw #dcd5da, 0.5vw 0.5vw 0.5vw rgba(224, 1, 141, 0.2),
+      -0.5vw -0.5vw 0.5vw rgba(224, 1, 141, 0.2),
+      0.5vw -0.5vw 0.5vw rgba(224, 1, 141, 0.2),
+      -0.5vw 0.5vw 0.5vw rgba(224, 1, 141, 0.2),
+      0 -0.5vw 0.5vw rgba(224, 1, 141, 0.2),
+      0 0.5vw 0.5vw rgba(224, 1, 141, 0.2), 0.5vw 0 0.5vw rgba(224, 1, 141, 0.2),
+      0 0 #fff;
+  }
+  60%,
+  80% {
+    text-shadow: 0 0 0.1vw #dcd5da, 0.5vw 0.5vw 0.5vw rgba(224, 1, 141, 0.2),
+      -0.5vw -0.5vw 0.5vw rgba(224, 1, 141, 0.2),
+      0.5vw -0.5vw 0.5vw rgba(224, 1, 141, 0.2),
+      -0.5vw 0.5vw 0.5vw rgba(224, 1, 141, 0.2),
+      0 -0.5vw 0.5vw rgba(224, 1, 141, 0.2),
+      0 0.5vw 0.5vw rgba(224, 1, 141, 0.2), 0.5vw 0 0.5vw rgba(224, 1, 141, 0.2),
+      0 0 #fff;
+  }
+  70%,
+  100% {
+    text-shadow: 0 0 0.1vw #ffeffa, 0.8vw 0.8vw 0.8vw rgba(224, 1, 141, 0.4),
+      -0.8vw -0.8vw 0.8vw rgba(224, 1, 141, 0.4),
+      0.8vw -0.8vw 0.8vw rgba(224, 1, 141, 0.4),
+      -0.8vw 0.8vw 0.5vw rgba(224, 1, 141, 0.4),
+      0 -0.8vw 0.5vw rgba(224, 1, 141, 0.4),
+      0 0.8vw 0.8vw rgba(224, 1, 141, 0.4);
+    box-shadow: 0 0 0.1vw #ffeffa, 0.8vw 0.8vw 0.8vw rgba(224, 1, 141, 0.4),
+      -0.8vw -0.8vw 0.8vw rgba(224, 1, 141, 0.4),
+      0.8vw -0.8vw 0.8vw rgba(224, 1, 141, 0.4),
+      -0.8vw 0.8vw 0.5vw rgba(224, 1, 141, 0.4),
+      0 -0.8vw 0.5vw rgba(224, 1, 141, 0.4),
+      0 0.8vw 0.8vw rgba(224, 1, 141, 0.4);
+  }
 }
