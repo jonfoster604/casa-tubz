@@ -1,9 +1,13 @@
 @use '../../Styles/Partials/variables' as *;
+#main-container {
+  padding: 0;
+}
 #activeGame {
   width: 100%;
   max-width: 650px;
   height: auto;
   display: flex;
+  flex-wrap: wrap;
   align-content: center;
   justify-content: center;
   &:hover {
@@ -14,56 +18,65 @@
   width: 100%;
   min-width: $abs-min-size;
   height: auto;
+  &.content--card.content--card-deets{
+    background-image: none;
+    border-radius: 24px;
+  }
   @media (min-width: $scr-tablet) {
     width: 100%;
   }
 }
+#activeGame{
+  max-width: $abs-max-size;
+  width: 95%;
+}
 div.content--card {
    
   &-info {
-    background-color: white;
+    background-color:rgba(255,255,255,.9);
     margin: auto auto;
+    padding-left:16px;
     width: 100%;
     height:auto;
+    font-size: 2rem;
+    & ul{
+
+      @media (min-width: 650px) {
+        width:80%;
+        margin:auto auto;
+        display:grid;
+        grid-template-columns:1fr 1fr ;
+        grid-template-rows: 30px 30px 30px;
+      }
+    }
+      
   }
   &-description{
       background-color:black;
       font-weight: normal;
-      :hover{
+      & p{
+        line-height: 2.82rem;
+
       }
   }
+  &-title{
+    margin:8px;
+    box-shadow: 0 0 5px 0 white;
+    border-radius: 24px;
+    padding:8px;
+  }
 }
-// div.content--card {
-//     &-heading{
-//         width:100%;
-//         border:1px solid
-//     }
-//     &-title{
-//         transform:translateY(-5rem);
-//         height:auto;
-//         background-color:rgba(0,0,0,.75);
-//         color:white;
-//         text-align: center;
-//         font-weight: 700;
-//     }
-// }
-
 ul {
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
   height: fit-content;
-//   align-items: center;
-//   justify-content: center;
-//   margin: auto auto;
-//   margin-bottom: 48px;
 }
 li {
   width: 95%;
   height: 50%;
   min-width: fit-content;
   padding: 8px;
-  // border-left:1px dotted blue;
   display: flex;
   text-align: left;
   align-content: flex-start;
@@ -96,13 +109,7 @@ img {
   height: auto;
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
-  // margin:auto auto;
   @media (min-width: $scr-tablet) {
     width: 100%;
   }
-}
-#main-container {
-  // margin:0;
-  // width:100%;
-  padding: 0;
 }

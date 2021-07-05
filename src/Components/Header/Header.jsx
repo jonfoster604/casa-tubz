@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { IconContext } from 'react-icons';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { VscChromeClose } from 'react-icons/vsc';
@@ -34,7 +35,10 @@ function Header() {
         <Hamburger />
       </div>
       <div className="navBar-block block2">
+      <NavLink to="/">
+
         <Logo/>
+      </NavLink>
       </div>
       <div className="navBar-block block3"></div>
       <nav

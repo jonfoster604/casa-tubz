@@ -24,7 +24,6 @@ export class GameDeets extends Component {
       })
       .then((res) => {
         this.setState({ activeGame: res.data });
-        console.log(this.state.activeGame);
       })
       .catch(function (error) {
         console.error(error);
@@ -37,7 +36,7 @@ export class GameDeets extends Component {
           <div>Loading</div>
         ) : (
           <>
-            <div className="content--card" id="topCard">
+            <div className="content--card content--card-deets" id="topCard">
               <img
                 src={this.state.activeGame.thumbnail}
                 alt={this.state.activeGame.title}
@@ -48,6 +47,7 @@ export class GameDeets extends Component {
                 <div className="content--card-title">
                   <h2 className="content--card-heading">{this.state.activeGame.title}</h2>
                 </div>
+                {/* <div className="content--card" id="gameActions"></div> */}
                 <div className="content--card-info">
                   <ul>
                     <li>Developer: {this.state.activeGame.developer}</li>
