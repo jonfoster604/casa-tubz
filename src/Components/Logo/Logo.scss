@@ -9,27 +9,27 @@
 }
 #logo {
   width: 100vw;
-  height:auto;
+  height: auto;
   &--h2 {
-    z-index: 9999;
     font-family: 'Neoneon';
+    text-align: center;
+    font-size: 4.6rem;
+    width: fit-content;
+    padding: 8px;
+    z-index: 9999;
     margin: auto auto;
     background-color: rgba(0, 0, 0, 0.55);
     color: hotpink;
-    width: fit-content;
-    animation: neonEffect 3s infinite;
-    // font-weight: bold;
-    text-align: center;
-    font-size: 4.6rem;
+    border: 1px solid purple;
     border-radius: 24px;
-    padding: 8px;
-    border: 1px solid hotpink;
-
+    animation: neonEffect 3s infinite;
     @media (min-width: $scr-tablet) {
       font-size: 6.8rem;
     }
   }
 }
+
+// ###### Keyframes animation created neonEffect by cycling through text-shadow on the h2 and an asyc effect on the box. ######
 
 @keyframes neonEffect {
   10%,

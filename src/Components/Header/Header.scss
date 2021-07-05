@@ -1,63 +1,26 @@
 @use '../../Styles/Partials/variables' as *;
-header {
-    padding:8px 0 0 24px;
-    background-color:rgba(0,0,0,.75);
-    position: fixed;
-    top:0;
-    left:0;
-    right:0;
-    overflow: hidden;
-    z-index: 10;
-}
-
+// ###### IDS ######
 #navWrapper{
     min-width: $abs-min-size;
     width:100vw;
     height:70px;
-    // border:1px solid red;
     display:flex;
-    // z-index: 75;
 }
-
-.navBar{
-    &:first-child{
-        width:50px;
-    }
-    &-block:not(:first-child){
-        flex:1 1 40%;
-        height:100%;
-        // border:1px solid blue;
-        align-content: center;
-    }
-    
-}
-#block1{
-    width:50px;
-    margin:auto auto;
-}
-.react-icons{
-    align-self: center;
-    color:white;
-    width:48px;
-    height:48px;   
-}
-
-
 #show{
-        display:unset;
-        font-size: 24px;
-        margin-bottom:10px;
-        text-align: right;
-        &:hover{
-            color:$main1;
-        }
-        &:active{
-            background-color: inherit;
-        }
+    display:unset;
+    font-size: 24px;
+    margin-bottom:10px;
+    text-align: right;
+    &:hover{
+        color:$main1;
     }
+    &:active{
+        background-color: inherit;
+    }
+}
 #hide{
-        display: none;
-    }
+    display: none;
+}
 
 #place {
     height: 100px;
@@ -74,15 +37,12 @@ header {
     top: 71px;
     width: 100vw;
     height: 100px;
-    // z-index: 50;
     padding-left: 16px;
     padding-right: 16px;
     & h1 {
         font-family: Monoton;
-        // z-index: 50;
         font-size: 6.4rem;
     }
-    
 }
 #flyoutMenu {
     width: 100vw;
@@ -94,7 +54,6 @@ header {
     padding-right: 24px;
     transition: transform 0.75s cubic-bezier(0, 0.52, 0, 1);
     overflow: hidden;
-    // z-index: 50;
     & li {
         font-size: 24px;
         margin-bottom:10px;
@@ -115,7 +74,7 @@ header {
 }
 
 #flyoutMenu.hide {
-    display:none;
+    transform: translate3d(120vw, 0, 0);
 }
 
 #flyoutMenu.show {
@@ -139,8 +98,57 @@ header {
         font-size: 2.8rem;
     }
 }
+#block1{
+    width:50px;
+    margin:auto auto;
+}
+
+// ###### Classes ######
+
+.navBar{
+    &:first-child{
+        width:50px;
+    }
+    &-block:not(:first-child){
+        flex:1 1 40%;
+        height:100%;
+        // border:1px solid blue;
+        align-content: center;
+    }
+    
+}
+.react-icons{
+    align-self: center;
+    color:white;
+    width:48px;
+    height:48px;   
+}
+
+// ###### Elements ######
+
+header {
+    padding:8px 0 0 24px;
+    background-color:rgba(0,0,0,.75);
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    overflow: hidden;
+    z-index: 10;
+}
+
+
+// ###### KeyFrames ######
+
+// ###### Creates effect of the menu flying up when opened ######
 
 @keyframes flydown{
     from{transform:translate3d(0,210vw, 0);}
     to{transform: translate3d(0,0vw, 0);}
+}
+
+// ###### Creates effect of the menu flying down when closed ######
+@keyframes flyout{
+    from{transform:translate3d(0,0vw, 0);}
+    to{transform: translate3d(0,210vw, 0);}
 }
