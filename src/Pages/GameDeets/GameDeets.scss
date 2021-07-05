@@ -19,16 +19,7 @@
   }
 }
 div.content--card {
-    // &-heading{
-    //     width:100%;
-    //     border:1px solid
-    // }
-    // &-title{
-    //     transform:translateY(-60px);
-    //     height:auto;
-    //     background-color:rgba(0,0,0,.75);
-    //     color:white;
-    // }
+   
   &-info {
     background-color: white;
     margin: auto auto;
@@ -38,10 +29,25 @@ div.content--card {
   &-description{
       background-color:black;
       font-weight: normal;
-    //   :hover{
-    //   }
+      :hover{
+      }
   }
 }
+// div.content--card {
+//     &-heading{
+//         width:100%;
+//         border:1px solid
+//     }
+//     &-title{
+//         transform:translateY(-5rem);
+//         height:auto;
+//         background-color:rgba(0,0,0,.75);
+//         color:white;
+//         text-align: center;
+//         font-weight: 700;
+//     }
+// }
+
 ul {
   display: flex;
   flex-flow: column nowrap;

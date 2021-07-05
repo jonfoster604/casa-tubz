@@ -6,11 +6,13 @@ import './Header.scss';
 
 function Header() {
   const [showMenu, setShowMenu] = useState(0);
+
   const toggle = () => setShowMenu(!showMenu);
 
   // ***** Function changes hamburger icon with open and close of menu ******
   const Hamburger = () => {
     if (showMenu) {
+
       return (
         <IconContext.Provider value={{ className: 'react-icons' }}>
           <VscChromeClose onClick={toggle} />
